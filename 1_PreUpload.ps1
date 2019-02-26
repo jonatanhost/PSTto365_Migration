@@ -16,6 +16,4 @@ switch ($LanguageInput)
     swedish {$LanguageCode = 1053}
 }
 
-$LanguageCode
-
 Get-Mailbox -Filter {Name -notlike '*discover*'} | Set-MailboxRegionalConfiguration -Language $LanguageCode -TimeZone "W. Europe Standard Time" -LocalizeDefaultFolderName
